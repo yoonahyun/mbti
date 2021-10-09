@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&family=Roboto&display=swap');
+        </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="container">
+    
+    <article class="start">
+    <h1 class="text-center mt-5" >나는 어떤 음식일까?</h1>
+    <button class="mt-5" onclick=start();>음식의 세계로 <br>출발🚀</button>
+    <!--<button class="mt-5" onclick=start();>메뉴판을 보여주세요👀</button>-->
+    </article>
+
+    <article class="question">
+       <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width:calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        <h2 id="title" class="questioin text-center mt-5">질문</h2>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="mt-5">Light</button>
+       <button id="B" type="button" class="mt-5">Light</button>
+       
+    </article>
+    
+    <article class="result">
+        <img id="img" class="rounded-circle mt-5" src="images/sandwich.png" alt="food">
+        <h2 id="food" class="text-center mt-5">음식이름</h2>
+        <h3 id="explain" class="text-center mt-5">설명</h3>
+        <button class="reset" onclick="doExec();">다시하기</button>
+   <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_sfh9 mt-5"></div>
+    </article>
+
+    
+  
+    <input type="hidden"id="EI" value="0">
+    <input type="hidden"id="SN" value="0">
+    <input type="hidden"id="TF" value="0">
+    <input type="hidden"id="JP" value="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        var num= 1;
+
+        var q ={
+        1:{"title":"신입생 첫날..밥을 먹어야하는데 아는사람이 없다...",
+        "type":"EI","A":"옆자리 친구한테 바로 말을 건다!","B":"아는사람이 없네?<br>혼자 먹어야겠다"},
+        2:{"title":"친구가 처음 본 친구와 대화를 할때 나는?","type":"EI","A":"맞장구를 쳐주며 나도 대화에 낀다","B":"핸드폰을 괜히 만지작..."},
+        3:{"title":"음식메뉴를 정할때 나는?","type":"EI","A":"나는 떡볶이,파스타,짜장면 어쩌구...<br>(신나게 바로 의견을 낸다)","B":"흠..글쎄?각자 하나씩 찾아보자"},
+        4:{"title":"카페에 주문한음료를 가지러 갔다","type":"SN","A":"음료를 들고온다","B":"헉 내가 이걸 가지러갔다가 넘어지면?!!<br>아까 계단이 되게 높던데...ㅠㅠ<br>하는 상상을하며 가져온다"},
+        5:{"title":"너무나도 귀여운 다이어리 굿즈가 있어서 사버렸다!","type":"SN","A":"사긴샀는데 몇번 안씀.<br>역시 작심삼일...<br>다음에는 안사겠다는 다짐을한다","B":"샀으니 써야지 다꾸도 시작해볼까? <br>상상을하며 스티커를 산다."},
+        6:{"title":"음식을 배달시켰는데 너무 늦게온다...전화해볼까?","type":"SN","A":"너무 늦네하며 바로 전화함","B":"까먹으셨나?<br>음식 만드는데 1시간이 걸리나?<br>전화해봐야겠다"},
+        7:{"title":"친구가 너무 피곤해서 1시까지 잤다고한다 당신의 반응은?","type":"TF","A":"1시? 대박 그럼 밥은?","B":"왜 피곤해?하며 걱정한다"},
+        8:{"title":"별로 친하지않은 친구가 시험을 망쳤다며 슬프다고한다","type":"TF","A":"그렇구나~힘내!","B":"아~진짜?"},
+        9:{"title":"친구가 화나는 일이 있었다며 얘기를 한다","type":"TF","A":"그래서?어떻게 됐는데?하며 <br>맞장구를 친다","B":"일단들어주고 친구를 위로해준다"},
+        10:{"title":"휴가기념으로 먹방 여행을 가기로했다 ","type":"JP","A":"도착해서 이거먹고 여기서는 <br>꼭 이메뉴를 먹어야해!!!","B":"유명한 집 리스트 일단 적고<br>그날 골라서 가자" },
+        11:{"title":"다음주까지 써야하는 쿠폰이 있다...언제쓰지?","type":"JP","A":"이날 쓰면되겠네 하며 체크해 놓는다 ","B":"최대한 연장을한다 언젠가 쓰겠지"},
+        12:{"title":"갑작스레 친구가 당일에 저녁을 먹자한다","type":"JP","A":"음..오늘은 쉬려고했는데...고민한다","B":"뭐 먹을건데?그거 먹고 이것도 먹자"}
+        }
+
+        
+
+        var result={
+            "ISTJ" : { "animal":"슴슴한 평양냉면","explain" : "떡볶이 설명", "img" : "popcorn.jpg"},
+            "ISFJ" : { "animal":"쫀득한 마카롱","explain" : "마카롱 설명", "img" : "popcorn.png"},
+            "INFJ" : { "animal":"모든 품어주는 마라탕","explain" : "감자탕 설명", "img" : "popcorn.jpg"},
+            "INTJ" : { "animal":"후다닥 먹는 효율적인 라면","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ISTP" : { "animal":"친해지기 어려운 고수있는 쌀국수","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ISFP" : { "animal":"겉과속이 다른 크렘브륄레","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "INFP" : { "animal":"물렁물렁 물복숭아","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "INTP" : { "animal":"오픈마인드 피자","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ESTP" : { "animal":"한없이 가벼운 솜사탕","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ESFP" : { "animal":"내가 세상의 중심 김치","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ENFP" : { "animal":"톡쏘는 팝핑캔디","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ENTP" : { "animal":"아찔하게 매운맛 떡볶이","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ESTJ" : { "animal":"다리는 하나씩 엄격한 치킨","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ESFJ" : { "animal":"세상편한 아이스아메리카노","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ENFJ" : { "animal":"동글동글 도넛","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ENTJ" : { "animal":"열정넘치는 새우튀김","explain" : "피자 설명", "img" : "popcorn.jpg"},
+        }
+        function start(){
+
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+
+
+        $("#A").click(function(){
+           var type = $("#type").val();
+           var preValue= $("#"+type).val();
+           $("#"+type).val(parseInt(preValue+1))
+           next();
+        });
+
+        $("#B").click(function(){
+            next();
+        });
+
+        function next(){
+            if(num == 13) {
+            $(".question").hide();
+            $(".result").show();
+            var mbti ="";
+            ($("#EI").val() <2)?  mbti += "I" : mbti += "E";
+            ($("#SN").val() <2)?  mbti += "N" : mbti += "S";
+            ($("#TF").val() <2)?  mbti += "F" : mbti += "T";
+            ($("#JP").val() <2)?  mbti += "P" : mbti += "J";
+            alert(mbti);
+              
+
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } else {
+
+        
+            $(".progress-bar").attr('style','width:calc(100/12*+'+num+'%)');
+            $("#title").html(q[num]["title"]);
+            $("#type").val(q[num]["type"]);
+            $("#A").html(q[num]["A"]);
+            $("#B").html(q[num]["B"]);
+            num++;
+                }
+
+            }
+            function doExec(){
+                location.reload();
+
+
+                
+        }
+
+
+          
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61617784b45e0932"></script>
+
+
+</body>
+
+
+</html>
