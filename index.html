@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jua&family=Roboto&display=swap');
         </style>
+          
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     
@@ -28,22 +29,28 @@
         <input id="type" type="hidden" value="EI">
         <button id="A" type="button" class="mt-5">Light</button>
        <button id="B" type="button" class="mt-5">Light</button>
+       <div class="progress mt-5">
+        <div class="progress-bar" role="progressbar" style="width:calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
        
     </article>
     
     <article class="result">
-        <img id="img" class="rounded-circle mt-5" src="images/sa.png" alt="food">
-        <h2 id="food" class="text-center">음식이름</h2>
+        <img id="img" class="images" src="images/냉면.png" alt="food">
+        <h2 id="food" class="text-center ">음식이름</h2>
         <h3 id="explain" class="explain text-center mt-5">설명</h3>
-        <button class="reset" onclick="doExec();">다시하기</button>
+        <button class="reset mt-5" onclick="doExec();">다시하기</button>
    <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_sfh9 mt-5"></div>
     </article>
-    
 
-    <ins class="kakao_ad_area" style="display:none;" 
+    <article><ins class="kakao_ad mt-5"
  data-ad-unit    = "DAN-kZiZHAMsdgEEX3yg" 
  data-ad-width   = "320" 
  data-ad-height  = "100"></ins> 
+</article>  
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4155033991546821"
+     crossorigin="anonymous"></script>
 <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
   
     <input type="hidden"id="EI" value="0">
@@ -57,25 +64,25 @@
         var num= 1;
 
         var q ={
-        1:{"title":"신입생 첫날..밥을 먹어야하는데 아는사람이 없다...",
+        1:{"title":"신입생 첫날 밥을 먹어야하는데 <br>아는사람이 없을때 나의 행동은?",
         "type":"EI","A":"옆자리 친구한테 바로 말을 건다!","B":"아는사람이 없네?<br>혼자 먹어야겠다"},
-        2:{"title":"친구가 처음 본 친구와 대화를 할때 나는?","type":"EI","A":"맞장구를 쳐주며 나도 대화에 낀다","B":"핸드폰을 괜히 만지작..."},
-        3:{"title":"음식메뉴를 정할때 나는?","type":"EI","A":"나는 떡볶이,파스타,짜장면 어쩌구...<br>(신나게 바로 의견을 낸다)","B":"흠..글쎄?각자 하나씩 찾아보자"},
-        4:{"title":"카페에 주문한음료를 가지러 갔다","type":"SN","A":"음료를 들고온다","B":"헉 내가 이걸 가지러갔다가 넘어지면?!!<br>아까 계단이 되게 높던데...ㅠㅠ<br>하는 상상을하며 가져온다"},
-        5:{"title":"너무나도 귀여운 다이어리 굿즈가 있어서 사버렸다!","type":"SN","A":"사긴샀는데 몇번 안씀.<br>역시 작심삼일...<br>다음에는 안사겠다는 다짐을한다","B":"샀으니 써야지 다꾸도 시작해볼까? <br>상상을하며 스티커를 산다."},
-        6:{"title":"음식을 배달시켰는데 너무 늦게온다...전화해볼까?","type":"SN","A":"너무 늦네하며 바로 전화함","B":"까먹으셨나?<br>음식 만드는데 1시간이 걸리나?<br>전화해봐야겠다"},
-        7:{"title":"친구가 너무 피곤해서 1시까지 잤다고한다 당신의 반응은?","type":"TF","A":"1시? 대박 그럼 밥은?","B":"왜 피곤해?하며 걱정한다"},
-        8:{"title":"별로 친하지않은 친구가 시험을 망쳤다며 슬프다고한다","type":"TF","A":"그렇구나~힘내!","B":"아~진짜?"},
-        9:{"title":"친구가 화나는 일이 있었다며 얘기를 한다","type":"TF","A":"그래서?어떻게 됐는데?하며 <br>맞장구를 친다","B":"일단들어주고 친구를 위로해준다"},
-        10:{"title":"휴가기념으로 먹방 여행을 가기로했다 ","type":"JP","A":"도착해서 이거먹고 여기서는 <br>꼭 이메뉴를 먹어야해!!!","B":"유명한 집 리스트 일단 적고<br>그날 골라서 가자" },
-        11:{"title":"다음주까지 써야하는 쿠폰이 있다...언제쓰지?","type":"JP","A":"이날 쓰면되겠네 하며 체크해 놓는다 ","B":"최대한 연장을한다 언젠가 쓰겠지"},
-        12:{"title":"갑작스레 친구가 당일에 저녁을 먹자한다","type":"JP","A":"음..오늘은 쉬려고했는데...고민한다","B":"뭐 먹을건데?그거 먹고 이것도 먹자"}
+        2:{"title":"친구가 나와 모르는 친구와 <br>대화를 할때 나는?","type":"EI","A":"맞장구를 쳐주며 나도 대화에 낀다","B":"핸드폰을 괜히 만지작..."},
+        3:{"title":"사람들과 음식메뉴를 정할때 <br>나의 행동은?","type":"EI","A":"나는 떡볶이,파스타,짜장면 어쩌구...<br>(신나게 바로 의견을 낸다)","B":"흠..글쎄?각자 하나씩 찾아보자"},
+        4:{"title":"카페에 주문한음료를 가지러 <br>갈때하는 생각","type":"SN","A":"아무생각없이 음료만 들고온다","B":"헉 내가 이걸 가지러갔다가 넘어지면?!!<br>아까 계단이 되게 높던데...ㅠㅠ<br>하는 상상을하며 가져온다"},
+        5:{"title":"다이어리를 쓰겠다 결심하여 구매했다<br>구매후 나의 행동은?","type":"SN","A":"사긴샀는데 몇번 안씀.<br>역시 작심삼일...<br>다음에는 안사겠다는 다짐을한다","B":"샀으니 써야지 다꾸도 시작해볼까? <br>상상을하며 스티커를 산다."},
+        6:{"title":"음식을 배달시켰는데 너무 늦게온다...<br>전화해볼까?","type":"SN","A":"너무 늦네하며 바로 전화함","B":"까먹으셨나?<br>음식 만드는데 1시간이 걸리나?<br>전화해봐야겠다"},
+        7:{"title":"시험날 친구가 피곤해서 공부를 못했다고 할때 당신의 반응은?","type":"TF","A":"그럼 오늘 시험은?지금이라도 공부해","B":"왜 피곤해?하며 걱정부터한다"},
+        8:{"title":"친하지않은 친구가 시험을 망쳤다며 슬퍼한다 어떤 말을 해줄까?","type":"TF","A":"그렇구나~힘내!","B":"아~진짜?"},
+        9:{"title":"친구가 화나는 일이 있었다며 얘기를 할때 <br>주로 나의 역할은?","type":"TF","A":"그래서?어떻게 됐는데?하며 <br>맞장구를 친다","B":"일단들어주고 친구를 위로해준다"},
+        10:{"title":"휴가기념으로 먹방 여행을 가기로했다<br>여행계획에서의 나는? ","type":"JP","A":"도착해서 이거먹고 여기서는 <br>꼭 이메뉴를 먹어야해!!!","B":"유명한 집 리스트 일단 적고<br>그날 골라서 가자" },
+        11:{"title":"다음주까지 써야하는 쿠폰이 있다...언제쓰지?","type":"JP","A":"이날 쓰면되겠네 하며 체크해 놓는다 ","B":"최대한 연장을하다가 생각났을때 쓴다"},
+        12:{"title":"갑작스레 친구가 당일에 저녁을 먹자한다 <br>당신의 반응은?","type":"JP","A":"음..오늘은 쉬려고했는데...고민한다","B":"뭐 먹을건데?그거 먹고 이것도 먹자"}
         }
 
         
 
         var result={
-            "ISTJ" : { "food":"평양냉면","explain" : "당신은 슴슴~한 매력이 있는 평양냉면입니다<br>주변에서 노잼...이라는 말을 듣죠?<br>당신은 표현을 하지 않을 뿐 조금 재밌는 사람입니다! 기죽지마세요!<br>머리속에서는 맴돌지만 입으로는 안나오는 표현들...<br>사람들 말에 공감은 해도 표현을 하지않아 주변에서 섭섭해하는 경우가 있어요<br>공개적인 장소에서 주목받는 것을 싫어합니다.하지만 발표는 누구보다 열심히 준비해요.<br>말에는 근거가 있어야한다 생각해요.<br><br>인간관계도 다양한 편은 아니지만 한번 친해지면 깊이있게 친해지는편<br>시간약속,실수,질서를 중요시해요.<br>한번은 괜찮지만 계속되면 안에서 화가납니다.<br>하지만 바로 말을 안함<br>친한사람에게는 그래도 관심표현을하는편<br>주변사람에게는 한없이 착한사람입니다.", "img" : "images/istj.jpg"},
+            "ISTJ" : { "food":"평양냉면","explain" : "<br>당신은 슴슴~한 매력이 있는 평양냉면입니다<br>주변에서 노잼...이라는 말을 듣죠?<br>당신은 표현을 하지 않을 뿐 조금 재밌는 사람입니다! 기죽지마세요!<br>머리속에서는 맴돌지만 입으로는 안나오는 표현들...<br>사람들 말에 공감은 해도 표현을 하지않아 주변에서 섭섭해하는 경우가 있어요<br>공개적인 장소에서 주목받는 것을 싫어합니다.하지만 발표는 누구보다 열심히 준비해요.<br>말에는 근거가 있어야한다 생각해요.<br><br>인간관계도 다양한 편은 아니지만 한번 친해지면 깊이있게 친해지는편<br>시간약속,실수,질서를 중요시해요.<br>한번은 괜찮지만 계속되면 안에서 화가납니다.<br>하지만 바로 말을 안함<br>친한사람에게는 그래도 관심표현을하는편<br>주변사람에게는 한없이 착한사람입니다.", "img" : "images/냉면.jpg"},
             "ISFJ" : { "food":"폭신폭신 식빵","explain" : "당신은 폭신폭신한 매력이 있는 식빵입니다.", "img" : "images/식빵.jpg"},
             "INFJ" : { "food":"복잡한 그들...마카롱","explain" : "복잡한 매력이 있는 마카롱입니다.", "img" : "images/마카롱.jpg"},
             "INTJ" : { "food":"후다닥 먹는 효율적인 라면","explain" : "효율성을 중시하는 매력이 있는 라면입니다.", "img" : "images/라면.jpg"},
@@ -85,12 +92,12 @@
             "INTP" : { "food":"오픈마인드 피자","explain" : "오픈마인드 매력이 있는 피자입니다.", "img" : "images/피자.jpg"},
             "ESTP" : { "food":"한없이 가벼운 솜사탕","explain" : "가벼운 매력이 있는 솜사탕입니다.", "img" : "images/솜사탕.jpg"},
             "ESFP" : { "food":"활발한 수다쟁이 케이크","explain" : "활발한 매력이 있는 케이크입니다.", "img" : "images/케이크.jpg"},
-            "ENFP" : { "food":"밝다 밝아 ","explain" : "피자 설명", "img" : "popcorn.jpg"},
-            "ENTP" : { "food":"아찔하게 매운맛 떡볶이","explain" : "피자 설명", "img" : "popcorn.jpg"},
-            "ESTJ" : { "food":"다리는 하나씩 엄격한 치킨","explain" : "피자 설명", "img" : "popcorn.jpg"},
-            "ESFJ" : { "food":"세상편한 아이스아메리카노","explain" : "피자 설명", "img" : "popcorn.jpg"},
-            "ENFJ" : { "food":"동글동글 도넛","explain" : "피자 설명", "img" : "popcorn.jpg"},
-            "ENTJ" : { "food":"열정넘치는 새우튀김","explain" : "피자 설명", "img" : "popcorn.jpg"},
+            "ENFP" : { "food":"항상 즐거운 팝핑캔디","explain" : "당신은 항상 즐거운 매력이있는 팝핑캔디입니다.", "img" : "popcorn.jpg"},
+            "ENTP" : { "food":"아찔하게 매운맛 떡볶이","explain" : "당신은 아찔하게 매운 매력이 있는 떡볶이입니다.", "img" : "popcorn.jpg"},
+            "ESTJ" : { "food":"다리는 하나씩 엄격한 치킨","explain" : "당신은 엄격한 매력이 있는 치킨입니다.", "img" : "images/치킨.png"},
+            "ESFJ" : { "food":"세상편한 아이스아메리카노","explain" : "당신은 세상 편한 매력이 있는 아이스아메리카노입니다.", "img" : "popcorn.jpg"},
+            "ENFJ" : { "food":"동글동글 도넛","explain" : "당신의 동글동글한 매력이 있는 도넛입니다.", "img" : "popcorn.jpg"},
+            "ENTJ" : { "food":"열정넘치는 새우튀김","explain" : "당신은 열정적인 매력이 있는 새우튀김입니다.", "img" : "popcorn.jpg"},
         }
         function start(){
 
@@ -120,7 +127,7 @@
             ($("#SN").val() <2)?  mbti += "N" : mbti += "S";
             ($("#TF").val() <2)?  mbti += "F" : mbti += "T";
             ($("#JP").val() <2)?  mbti += "P" : mbti += "J";
-            alert(mbti);
+            
               
 
                 $("#img").attr("src",result[mbti]["img"]);

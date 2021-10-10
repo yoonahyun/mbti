@@ -5,19 +5,25 @@
 body{
 
     width: 100vh;
-    height:100vh;
+   
     background-image: url(images/food.png);
     font-family: 'Jua', sans-serif;
-   
+   margin: 0 auto;
 
 }
 
 article{
     display: flex;
     flex-direction: column;
-    background-color:white;
-    height: 200vh;
+  
     align-items: center;
+}
+
+article.result{
+   
+    background-color: white;
+    margin: 0 auto;
+   
 }
 
 
@@ -36,8 +42,10 @@ button{
     }
 
     .questioin{
-    font-size: 40px;
+    font-size: 35px;
     background-color: thistle;
+    border-radius: 25px;
+    width: 600px;
     }
 
 button:hover{
@@ -46,13 +54,25 @@ button:hover{
 
 #food{
     background-color: thistle;
-    width: 400px;
+    width: 500px;
     border-radius: 25px;
     font-size: 45px;
+    
 }
 
 #explain{
-    font-size: 25px;
+    font-size: 19px;
+  border-radius: 10px;
+  background-color: rgba(59, 57, 57, 0.425);
+ margin: 0 auto;
+ line-height: 1.8;
+  
+}
+
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
 }
 
 
@@ -84,7 +104,9 @@ button:hover{
 #img {
     width: 600px;
     height: 500px;
-    margin: 0 auto;
+    
+   
+    
     
 }
 
