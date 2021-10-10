@@ -5,9 +5,10 @@
 body{
 
     width: 100vh;
-    height: 100vh;
-    background-image: url(images/food.jpg);
+    height:100vh;
+    background-image: url(images/food.png);
     font-family: 'Jua', sans-serif;
+   
 
 }
 
@@ -15,9 +16,11 @@ article{
     display: flex;
     flex-direction: column;
     background-color:white;
-    height: 100vh;
+    height: 200vh;
     align-items: center;
 }
+
+
 
 #title.question{
     font-size: 50px;
@@ -41,6 +44,16 @@ button:hover{
     background-color:thistle;
 }
 
+#food{
+    background-color: thistle;
+    width: 400px;
+    border-radius: 25px;
+    font-size: 45px;
+}
+
+#explain{
+    font-size: 25px;
+}
 
 
 .reset{
@@ -65,12 +78,14 @@ button:hover{
 
 .result{
     display: none;
+    
 }
 
 #img {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 500px;
     margin: 0 auto;
+    
 }
 
 
