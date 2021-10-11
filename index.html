@@ -21,23 +21,24 @@
     <!--<button class="mt-5" onclick=start();>메뉴판을 보여주세요👀</button>-->
     </article>
 
+   
+
     <article class="question">
-       <div class="progress mt-5">
-            <div class="progress-bar" role="progressbar" style="width:calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
+        <div class="progress mt-5">
+        <div class="progress-bar" role="progressbar" style="width:calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      
         <h2 id="title" class="questioin text-center mt-5">질문</h2>
         <input id="type" type="hidden" value="EI">
         <button id="A" type="button" class="mt-5">Light</button>
        <button id="B" type="button" class="mt-5">Light</button>
-       <div class="progress mt-5">
-        <div class="progress-bar" role="progressbar" style="width:calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
+       
        
     </article>
     
     <article class="result">
         <img id="img" class="images" src="images/냉면.png" alt="food">
-        <h2 id="food" class="text-center ">음식이름</h2>
+        <h2 id="food" class="text-center mt-5 ">음식이름</h2>
         <h3 id="explain" class="explain text-center mt-5">설명</h3>
         <button class="reset mt-5" onclick="doExec();">다시하기</button>
    <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_sfh9 mt-5"></div>
@@ -72,7 +73,7 @@
         5:{"title":"다이어리를 쓰겠다 결심하여 구매했다<br>구매후 나의 행동은?","type":"SN","A":"사긴샀는데 몇번 안씀.<br>역시 작심삼일...<br>다음에는 안사겠다는 다짐을한다","B":"샀으니 써야지 다꾸도 시작해볼까? <br>상상을하며 스티커를 산다."},
         6:{"title":"음식을 배달시켰는데 너무 늦게온다...<br>전화해볼까?","type":"SN","A":"너무 늦네하며 바로 전화함","B":"까먹으셨나?<br>음식 만드는데 1시간이 걸리나?<br>전화해봐야겠다"},
         7:{"title":"시험날 친구가 피곤해서 공부를 못했다고 할때 당신의 반응은?","type":"TF","A":"그럼 오늘 시험은?지금이라도 공부해","B":"왜 피곤해?하며 걱정부터한다"},
-        8:{"title":"친하지않은 친구가 시험을 망쳤다며 슬퍼한다 어떤 말을 해줄까?","type":"TF","A":"그렇구나~힘내!","B":"아~진짜?"},
+        8:{"title":"친하지않은 친구가 시험을 망쳤다며 슬퍼한다 어떤 말을 해줄까?","type":"TF","A":"그렇구나~힘내!","B":"아~진짜?어떡해ㅠㅠ"},
         9:{"title":"친구가 화나는 일이 있었다며 얘기를 할때 <br>주로 나의 역할은?","type":"TF","A":"그래서?어떻게 됐는데?하며 <br>맞장구를 친다","B":"일단들어주고 친구를 위로해준다"},
         10:{"title":"휴가기념으로 먹방 여행을 가기로했다<br>여행계획에서의 나는? ","type":"JP","A":"도착해서 이거먹고 여기서는 <br>꼭 이메뉴를 먹어야해!!!","B":"유명한 집 리스트 일단 적고<br>그날 골라서 가자" },
         11:{"title":"다음주까지 써야하는 쿠폰이 있다...언제쓰지?","type":"JP","A":"이날 쓰면되겠네 하며 체크해 놓는다 ","B":"최대한 연장을하다가 생각났을때 쓴다"},

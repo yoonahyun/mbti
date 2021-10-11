@@ -4,24 +4,28 @@
 
 body{
 
-    width: 100vh;
-   
+    
+  
     background-image: url(images/food.png);
     font-family: 'Jua', sans-serif;
-   margin: 0 auto;
+  
 
+}
+.container{
+    padding: 0;
+    
 }
 
 article{
     display: flex;
     flex-direction: column;
-  
-    align-items: center;
+     
+    
 }
 
 article.result{
    
-    background-color: white;
+    
     margin: 0 auto;
    
 }
@@ -34,18 +38,18 @@ article.result{
 
 
 button{
-    width: 500px;
-    height: 300px;
+ color: black;
+    width: auto;
     border-radius: 25px;
-    font-size: 30px;
+    font-size: 22px;
   
     }
 
     .questioin{
-    font-size: 35px;
-    background-color: thistle;
-    border-radius: 25px;
-    width: 600px;
+    font-size: 28px;
+   background-color:rgba(224, 224, 224, 0.74);
+    justify-content: center;
+    align-items: center;
     }
 
 button:hover{
@@ -54,18 +58,19 @@ button:hover{
 
 #food{
     background-color: thistle;
-    width: 500px;
+    margin: 0 auto;
     border-radius: 25px;
-    font-size: 45px;
+    font-size: 40px;
     
 }
 
 #explain{
     font-size: 19px;
   border-radius: 10px;
-  background-color: rgba(59, 57, 57, 0.425);
+  background-color: rgb(248, 255, 225);
  margin: 0 auto;
  line-height: 1.8;
+ 
   
 }
 
@@ -77,11 +82,11 @@ button:hover{
 
 
 .reset{
-    width:500px;
+    
     height: 100px;
     font-size: 40px;
     border-radius: 25px;
-
+    margin: 0 auto;
 }
 
 .btn-light{
@@ -102,13 +107,16 @@ button:hover{
 }
 
 #img {
-    width: 600px;
-    height: 500px;
-    
-   
+   margin: 0 auto;
+    width: 300px;
+    height: 300px;
     
     
 }
 
+.addthis_inline_share_toolbox_sfh9{
+
+   margin: 0 auto;
+}
 
 
