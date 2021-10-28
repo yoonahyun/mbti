@@ -1,4 +1,3 @@
-# mbti
-#url: https://whatisyourfood.netlify.app/
+# mbti url: https://whatisyourfood.netlify.app/
 
 미완성
